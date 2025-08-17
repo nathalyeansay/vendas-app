@@ -9,7 +9,7 @@ import json
 def conectar_planilha():
     try:
         # Lê as credenciais diretamente do Streamlit Secrets
-        creds_info = json.loads(st.secrets["google"]["GOOGLE_CREDS"])
+        creds_info = json.loads(st.secrets["google"]["GOOGLE_CREDS"].replace("\\n", "\n"))
 
         # Cria as credenciais de serviço
         creds = Credentials.from_service_account_info(creds_info, scopes=[
