@@ -1,4 +1,8 @@
 import streamlit as st
+import vendas_app_clean.cadastro_vendas as cadastro
+import vendas_app_clean.busca_vendas as busca
+import vendas_app_clean.relatorio_vendas as relatorio
+
 
 PAGES = {
     "Cadastro de Vendas": "cadastro_vendas",
